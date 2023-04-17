@@ -1,2 +1,6 @@
 A short description of my project. ;)
 A new line..
+Branches are just pointers to  a commit object.
+Each commit object contains a pointer to a project directory tree checksum object wich contains pointers to a blob object
+for each file.
+HEAD is a special pointer with points to the current branch that we are on at each time.

@@ -1,0 +1,171 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    /* font-family: 'Kalam', cursive; */
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: grid;
+    /* grid-template-rows: 10% 80% 10%; */
+    grid-template-rows: 13% 1fr;
+    /* grid-template-columns: 85% 1fr; */
+    grid-template-columns: 100%;
+}
+
+nav {
+    /* height: 10%;
+    width: 100%; */
+    grid-column: 1 /2;
+    grid-row: 1;
+    background-color: rgb(235, 229, 229);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+#nav_links
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 3;
+    font-weight: bold;
+}
+#nav_links a:hover 
+{
+    color: #bd2c2c;
+}
+#nav_motto
+{
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#nav_social_media
+{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 5px;
+}
+main {
+    /* height: 80%;
+    width: 85%; */
+    grid-column: 1;
+    grid-row: 2;
+    /* background-color: blueviolet; */
+    background-image: url('/assets/city_view.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.faded
+{
+    margin: auto;
+    width: 60%;
+    height: 90%;
+    background-color: #000000;
+    opacity: 0.8;
+}
+
+aside {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: aquamarine;
+}
+
+/* footer{
+    grid-column: 1/3;
+    grid-row: 3;
+    background-color: cadetblue;
+} */
+@import url('https://fonts.googleapis.com/css?family=Eagle+Lake');
+
+#boldname {
+    font-family: "Eagle Lake", cursive;
+    text-transform: capitalize;
+    /* text-align: center; */
+    font-weight: bolder;
+    font-size: 40px;
+    color: rgb(8, 3, 2);
+    /* background-color: rgb(84, 84, 84); */
+    /* text-shadow: rgb(45, 20, 1) 2px 2px 2px; */
+}
+#extra_undername
+{
+    font-size: 15px;
+    color: rgb(151, 53, 33);
+}
+.txt-red
+{
+    color: rgb(151, 53, 33);
+}
+.txt-yellow
+{
+    color: rgb(206, 206, 89);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+/* 3d icons code */
+/* rgba(244,67,54,1): rgba(244,67,54,1);
+$blueColor:rgba(33,150,243,1); */
+
+.flex-center {
+  width: 100%;
+  min-height: 50vh;
+  
+  background: #000;
+  
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icon-3d {
+  padding: 10px;
+  -webkit-animation: icon3d 200ms 10;
+  animation: icon3d 200ms 10;
+  color: #0c0101;
+  &:hover {
+    -webkit-animation: icon3d 200ms infinite;
+          animation: icon3d 200ms infinite;
+  }
+}
+
+@keyframes icon3d {
+  0% {
+    text-shadow: 5px 4px rgba(244,67,54,1), -5px -6px rgba(33,150,243,1);
+  }
+  25% {
+    text-shadow: -5px -6px rgba(244,67,54,1), 5px 4px rgba(33,150,243,1);
+  }
+  50% {
+    text-shadow: 5px -4px rgba(244,67,54,1), -8px 4px rgba(33,150,243,1);
+  }
+  75% {
+    text-shadow: -8px -4px rgba(244,67,54,1), -5px -4px rgba(33,150,243,1);
+  }
+  100% {
+    text-shadow: -5px 0 rgba(244,67,54,1), 5px -4px rgba(33,150,243,1);
+  }
+}

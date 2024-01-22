@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <title>Carousel</title>
+    <style>
+        /* Spacing system ....
+            Font size system....
+            Main color: #087f5b
+            Gray color: #343a40
+        */
+        * {
+            margin: 0;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: #343a40;
+            /* border-bottom: 8px solid #087f5b; */
+            line-height: 1;
+            /* This is about text and will get inherited.*/
+        }
+        .carousel{
+            width: 800px;
+            margin: 100px auto;
+            background-color: #087f5b;
+            /* padding: 32px;
+            padding-left: 86px;
+            padding-right: 48px; */
+            /* using short-hand property, is clock-wise top- right-bottom-left */
+            padding: 32px 48px 32px 86px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 86px;
+            position: relative;
+        }
+        img{
+            height: 200px;
+            border-radius: 8px;
+            transform: scale(1.5);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+        }
+        .testimonial
+        {}
+        .testimonial-text{
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.5;
+            margin-bottom: 32px;
+            color: #e6fcf5;
+        }
+        .testimonial-author{
+            font-size: 14px;
+            margin-bottom: 4px;
+            color: #c3fae8;
+        }
+        .testimonial-job{
+            font-size: 12px;
+            color: #c3fae8;
+        }
+        .btn{
+            background-color: #fff;
+            border: none;
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            border-radius: 50%;
+            /* flex box is helpful even if we have only one element. */
+            display: flex; 
+            /*here the only item is the icon and easiest way is to position it in the center is using flexbox.*/
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        .btn--left{
+            left: 0;
+            top: 50%; /* IS RELATIVE TO PARENT CONTAINER */ 
+            transform: translate(-50%, -50%); /* IS RELATIVE TO ELEMENT ITSELF */
+        }
+        .btn--right{
+            top: 50%;
+            right: 0;
+            transform: translate(50%, -50%);
+        }
+        .btn-icon{ /* These are now flex items . in flex mode, the browser tries to shrink the elements
+            width to fit them properly. so the width value specified by us will not take effect compeletly,
+            so in order to apply the specified width, we need to take the items out of the normal flow of the page by positioning them absoloutly.*/
+            /* For position an element absoloutly, it is realy important that in which container do we want that element to be positioned absoloutly.
+            so we need to choose the parent container for absoloute positioned element, and set it and position relative. */
+            height: 24px;
+            width: 24px;
+            stroke: #087f5b;
+        }
+        .dots
+        {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 40px);
+            display: flex;
+            gap: 12px;
+        }
+        .dot{
+            height: 12px;
+            width: 12px;
+            background-color: #fff;
+            border: 2px solid #087f5b;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .dot--fill{
+            background-color: #087f5b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel">
+        <img src="f3.jpg" alt="A deliciuos cake" />
+        <blockquote class="testimonial">
+            <p class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quas libero
+                placeat, quidem nostrum repellendus ratione quibusdam voluptatibus</p>
+             <p class="testimonial-author">Rasoul Abolhasanzadeh</p>
+             <p class="testimonial-job">Freshman software engineer at Faraabeen co</p>   
+        </blockquote>
+        <button class="btn btn--left">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="btn-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+              </svg>
+        </button>
+        <button class="btn btn--right">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="btn-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+        </button>
+        <div class="dots">
+            <button class="dot dot--fill">&nbsp;</button>
+            <button class="dot">&nbsp;</button>
+            <button class="dot">&nbsp;</button>
+            <button class="dot">&nbsp;</button>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Spacing system ....
+            Font size system....
+            Main color: #087f5b
+            Gray color: #343a40
+        */
+        * {
+            margin: 0;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: #343a40;
+            /* border-bottom: 8px solid #087f5b; */
+            line-height: 1; /* This is about text and will get inherited.*/
+            display: flex;
+            justify-content: center;
+        }
+table{
+    width: 800px;
+    /*margin: 0 auto;*/ /*Trick For centering any block!*/
+    /* border: 1px solid #343a40; */
+    margin-top: 100px;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+th, td{
+    /* border: 1px solid #343a40; */
+    padding: 16px 24px; /* top/bottom and left/right */
+    text-align: left;
+}
+thead tr{
+    background-color: #087f5b;
+    color: #fff;
+}
+thead th{
+    width: 25%;
+}
+tbody tr:nth-child(odd){
+    background-color: #f8f9fa;
+}
+tbody tr:nth-child(even){
+    background-color: #e9ecef;
+}
+/* Always therer are multiple ways of doing the same thing in CSS! */
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Chair</th>
+                <th>Color</th>
+                <th>height</th>
+                <th>Ergonomic</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Width</th>
+                <td>50cm</td>
+                <td>80cm</td>
+                <td>True</td>         
+            </tr>
+            <tr>
+                <th>Depth</th>
+                <td>70cm</td>
+                <td>60cm</td>
+                <td>True</td>         
+            </tr>
+            <tr>
+                <th>Weight</th>
+                <td>5kg</td>
+                <td>7kg</td> 
+                <td>True</td>        
+            </tr>
+            <tr>
+                <th>Rolling</th>
+                <td>180deg</td>
+                <td>360deg</td> 
+                <td>True</td>        
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
